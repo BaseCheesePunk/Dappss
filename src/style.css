@@ -1,53 +1,91 @@
-/* General Styles */
-.body {
-  font-family: Arial, sans-serif;
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
   background-color: #f4f4f4;
   color: #333;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 .container {
   max-width: 800px;
-  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  background-color: white;
   padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
 }
 
-/* Logo */
+/* Logo Styling */
 .logo {
-  width: 200px;
+  width: 150px;
   margin-bottom: 20px;
 }
 
-/* NFT Grid */
-.nft-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+/* Title Styling */
+h1 {
+  font-size: 28px;
   margin-bottom: 20px;
+  color: #333;
+}
+
+/* NFT Grid Styling */
+.nft-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
 }
 
 .nft-image {
-  width: 150px;
-  height: 150px;
-  margin: 10px;
-  border: 1px solid #ddd;
+  width: 100%;
+  height: auto;
   border-radius: 8px;
+  transition: transform 0.2s;
 }
 
-/* Project Description */
+.nft-image:hover {
+  transform: scale(1.05);
+}
+
+/* Project Description Styling */
 .project-description {
-  margin-bottom: 20px;
+  margin: 20px 0;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
-/* GIF Animation */
+/* GIF Animation Styling */
 .mint-gif {
   width: 100%;
   max-width: 400px;
+  margin: 20px 0;
+  border-radius: 8px;
 }
 
-/* Hidden Elements */
-.hidden {
-  display: none;
+/* Button Section Styling */
+.button-section {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Wallet Info Styling */
+#walletInfo p {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 /* Button Styling */
@@ -58,21 +96,47 @@ button {
   padding: 12px 24px;
   cursor: pointer;
   border-radius: 8px;
-  margin-top: 10px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
   background-color: #005bb5;
 }
 
-/* Wallet Info Styling */
-#walletInfo p {
-  margin: 10px 0;
-  font-size: 18px;
+/* Disabled Button Styling */
+button:disabled {
+  background-color: #bbb;
+  cursor: not-allowed;
 }
 
-/* Social Links */
-.social-links img {
-  width: 30px;
-  margin: 5px;
+/* Hidden Elements */
+.hidden {
+  display: none;
+}
+
+/* Message Section Styling */
+#message {
+  margin-top: 10px;
+  font-size: 16px;
+  color: green;
+  font-weight: bold;
+}
+
+/* Social Links Section Styling */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-links a img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s;
+}
+
+.social-links a img:hover {
+  transform: scale(1.1);
 }
